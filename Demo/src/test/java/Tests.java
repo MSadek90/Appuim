@@ -1,5 +1,7 @@
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.appmanagement.BaseOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.testng.annotations.Test;
 
@@ -22,7 +24,7 @@ public class Tests {
         try {
             driver = new AndroidDriver(
                     // The default URL in Appium 1 is http://127.0.0.1:4723/wd/hub
-                    new URI("http://192.168.100.8").toURL(), options
+                    new URI("http://127.0.0.1:4723").toURL(), options
             );
         } catch (Exception e) {
             throw new RuntimeException(e);
