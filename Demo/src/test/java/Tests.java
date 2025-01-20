@@ -20,6 +20,7 @@ public class Tests {
         service.start();
 
         UiAutomator2Options options = new UiAutomator2Options();
+        options.setDeviceName("Android");
         AndroidDriver driver;
         try {
             driver = new AndroidDriver(
